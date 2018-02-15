@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+
+    </head>
+    <body>
+
+        <div id="app">
+            <button v-on:click="show = !show">Show / Hide</button>
+            <p v-if="show">I'm part-time visible!</p>
+            <p v-else>Am I visible?</p>
+            <hr>
+            <ul>
+                 <!-- <li v-for="person in persons">{{ person.name }}</li>  -->
+                 <li v-for="(person, index) in persons">{{ index }} - {{ person.name }}, {{ person.age }} years old</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
